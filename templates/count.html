@@ -1,0 +1,14 @@
+<h1>there are {{count}} words in your text</h1>
+<br>
+<a href="{% url 'home' %}">back to home</a>
+<br>
+<h1>original texts are below:</h1>
+{{fulltext}}
+
+<h1>here's how many times the word appears:</h1>
+{% for word, times in sortedwords %}
+
+<h3>{{word}} -- {{times}}</h3>
+
+
+{% endfor %}
